@@ -1,7 +1,6 @@
 import { redirect } from "next/navigation";
 
 import { LoginForm } from "@/components/login-form";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getSessionFromCookie } from "@/lib/session";
 
 export default async function LoginPage() {
@@ -13,32 +12,19 @@ export default async function LoginPage() {
 
   return (
     <main className="min-h-screen bg-[linear-gradient(180deg,var(--background)_0%,#fff7a8_100%)] px-6 py-10">
-      <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-5xl items-center gap-8 lg:grid-cols-2">
-        <section className="space-y-6">
-
+      <div className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-2xl flex-col items-center justify-center gap-6">
+        <section className="space-y-4 text-center">
           <div className="space-y-4">
-            <h1 className="max-w-2xl text-3xl font-semibold text-[var(--foreground)] sm:text-4xl">
+            <h1 className="text-3xl font-semibold text-[var(--foreground)] sm:text-4xl">
               Acceso privado con JWT
             </h1>
 
           </div>
-          <Card className="max-w-sm border-[var(--foreground)] bg-white">
-            <CardHeader>
-              <CardTitle className="text-[var(--secondary)]">Usuario de prueba</CardTitle>
-              <CardDescription>Credenciales fijas:</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-2 text-sm text-[var(--muted-foreground)]">
-              <p>
-                <span className="font-medium text-[var(--foreground)]">Email:</span> admin@tomates.com
-              </p>
-              <p>
-                <span className="font-medium text-[var(--foreground)]">Password:</span> 1234
-              </p>
-            </CardContent>
-          </Card>
         </section>
 
-        <LoginForm />
+        <div className="w-full max-w-md">
+          <LoginForm />
+        </div>
       </div>
     </main>
   );

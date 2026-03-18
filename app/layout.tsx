@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JWT Garden",
-  description: "Login con JWT, panel privado y despliegue listo para Vercel",
+  title: "JWT",
+  description: "Login con JWT",
 };
 
 export default function RootLayout({

@@ -10,7 +10,7 @@ export function Button({ className, variant = "default", ...props }: ButtonProps
   return (
     <button
       className={cn(
-        "inline-flex h-10 items-center justify-center rounded-md px-4 text-sm font-medium transition disabled:pointer-events-none disabled:opacity-60",
+        "inline-flex h-10 cursor-pointer items-center justify-center rounded-md px-4 text-sm font-medium transition disabled:pointer-events-none disabled:opacity-60",
         variant === "default" &&
           "border border-[var(--foreground)] bg-[var(--accent)] text-white hover:bg-[var(--accent-strong)]",
         variant === "secondary" &&
