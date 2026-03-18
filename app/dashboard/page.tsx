@@ -48,7 +48,7 @@ export default async function DashboardPage() {
   return (
     <main className="min-h-screen bg-[linear-gradient(180deg,var(--background)_0%,#fff7a8_100%)] px-6 py-10">
       <div className="mx-auto max-w-6xl space-y-8">
-        <section className="grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
+        <section>
           <Card className="border-[var(--foreground)] bg-white shadow-sm">
             <CardHeader className="space-y-4">
               <div className="flex flex-wrap items-start justify-between gap-4">
@@ -79,20 +79,6 @@ export default async function DashboardPage() {
                 <p className="text-sm text-[var(--muted-foreground)]">Vida del token</p>
                 <p className="mt-2 font-medium text-[var(--foreground)]">{SESSION_MAX_AGE / 60} minutos</p>
               </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-[var(--foreground)] bg-[var(--card-strong)] text-white">
-            <CardHeader>
-              <CardTitle className="text-[var(--background)]">Recordatorio de seguridad</CardTitle>
-              <CardDescription className="text-white/85">
-                El logout elimina el token del cliente, pero no invalida tokens ya emitidos en otros dispositivos.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-3 text-sm leading-7 text-white/90">
-              <p>Por eso se usa una caducidad corta y cookie `httpOnly`.</p>
-              <p>Si el token expira o no es valido, `proxy.ts` bloquea el acceso.</p>
-              <p>En un proyecto real convendria anadir refresh tokens o una lista de revocacion.</p>
             </CardContent>
           </Card>
         </section>
