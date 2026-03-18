@@ -24,7 +24,7 @@ export function LogoutButton() {
   }
 
   return (
-    <Button onClick={handleLogout} type="button" variant="secondary">
+    <Button onClick={handleLogout} type="button">
       {isLoading ? "Cerrando..." : "Cerrar sesión"}
     </Button>
   );
