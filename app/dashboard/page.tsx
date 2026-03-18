@@ -54,13 +54,12 @@ export default async function DashboardPage() {
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div className="space-y-2">
                   <p className="text-sm font-medium text-[var(--accent)]">
-                    Zona privada
+                    Zona VIP súper exclusiva
                   </p>
                   <CardTitle className="text-3xl text-[var(--foreground)]">
                     Bienvenido, {session.name}
                   </CardTitle>
                   <CardDescription className="max-w-2xl text-base">
-                    Tu sesion esta activa y el acceso a esta vista se valida con JWT antes de renderizar la pagina.
                   </CardDescription>
                 </div>
                 <LogoutButton />
@@ -86,8 +85,7 @@ export default async function DashboardPage() {
         <section className="grid gap-6 lg:grid-cols-2">
           <Card className="border-[var(--foreground)] bg-white">
             <CardHeader>
-              <CardTitle className="text-[var(--secondary)]">15 etiquetas HTML mas usadas</CardTitle>
-              <CardDescription>Resumen rapido para el panel privado.</CardDescription>
+              <CardTitle className="text-[var(--secondary)]">Etiquetas HTML</CardTitle>
             </CardHeader>
             <CardContent className="flex flex-wrap gap-3">
               {htmlTags.map((tag) => (
@@ -103,8 +101,7 @@ export default async function DashboardPage() {
 
           <Card className="border-[var(--foreground)] bg-white">
             <CardHeader>
-              <CardTitle className="text-[var(--secondary)]">Funciones principales del curso</CardTitle>
-              <CardDescription>Herramientas y APIs aplicadas en esta practica.</CardDescription>
+              <CardTitle className="text-[var(--secondary)]">Funciones</CardTitle>
             </CardHeader>
             <CardContent className="grid gap-3 sm:grid-cols-2">
               {courseFunctions.map((fn) => (

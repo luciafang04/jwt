@@ -48,10 +48,9 @@ export function LoginForm() {
   return (
     <Card className="border-[var(--border)] shadow-sm">
       <CardHeader className="space-y-2">
-        <CardTitle className="text-2xl">Iniciar sesion</CardTitle>
-        <CardDescription>
-          Accede al panel privado con el usuario de prueba o modifica el formulario para comprobar la validacion.
-        </CardDescription>
+        <CardTitle className="text-2xl">Iniciar sesión</CardTitle>
+
+
       </CardHeader>
       <CardContent>
         <form className="space-y-5" onSubmit={handleSubmit}>
@@ -68,7 +67,7 @@ export function LoginForm() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="password">Contrasena</Label>
+            <Label htmlFor="password">Contraseña</Label>
             <Input
               id="password"
               type="password"
@@ -89,9 +88,7 @@ export function LoginForm() {
           </Button>
         </form>
       </CardContent>
-      <CardFooter className="text-sm text-[var(--muted-foreground)]">
-        El token se guarda en una cookie `httpOnly` con expiracion corta para reducir riesgos.
-      </CardFooter>
+
     </Card>
   );
 }
