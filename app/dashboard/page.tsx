@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 
 import { LogoutButton } from "@/components/logout-button";
+import { TokenCountdown } from "@/components/token-countdown";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SESSION_MAX_AGE } from "@/lib/auth";
 import { getSessionFromCookie } from "@/lib/session";
@@ -75,8 +76,7 @@ export default async function DashboardPage() {
                 <p className="mt-2 font-medium text-[var(--foreground)]">{session.role}</p>
               </div>
               <div className="rounded-md border border-[var(--secondary)] bg-[var(--surface-soft)] p-4">
-                <p className="text-sm text-[var(--muted-foreground)]">Vida del token</p>
-                <p className="mt-2 font-medium text-[var(--foreground)]">{SESSION_MAX_AGE / 60} minutos</p>
+                <TokenCountdown initialSeconds={SESSION_MAX_AGE} />
               </div>
             </CardContent>
           </Card>

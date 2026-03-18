@@ -1,12 +1,12 @@
 import { jwtVerify, SignJWT } from "jose";
 
 export const SESSION_COOKIE_NAME = "jwt-session";
-export const SESSION_MAX_AGE = 60 * 30;
+export const SESSION_MAX_AGE = 60;
 
 export const DEMO_USER = {
   id: "1",
-  email: "admin@tomates.com",
-  name: "Admin Tomates",
+  email: "admin@gazpacho.com",
+  name: "Admin Gazpacho",
   role: "Administrador",
 } as const;
 

@@ -11,7 +11,7 @@ Aplicacion realizada con Next.js, React y TypeScript para practicar:
 
 ## Usuario de prueba
 
-- Email: `admin@tomates.com`
+- Email: `admin@gazpacho.com`
 - Password: `1234`
 
 ## Funcionalidades implementadas
