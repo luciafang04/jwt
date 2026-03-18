@@ -12,10 +12,10 @@ export default async function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[var(--background)] px-6 py-10">
+    <main className="min-h-screen bg-[linear-gradient(180deg,var(--background)_0%,#fff7a8_100%)] px-6 py-10">
       <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-5xl items-center gap-8 lg:grid-cols-2">
         <section className="space-y-6">
-          <span className="inline-flex rounded-md border border-[var(--border)] bg-white px-3 py-1 text-sm font-medium text-[var(--foreground)]">
+          <span className="inline-flex rounded-md border border-[var(--foreground)] bg-[var(--accent)] px-3 py-1 text-sm font-medium text-white">
             Practica de autenticacion con JWT
           </span>
           <div className="space-y-4">
@@ -26,35 +26,20 @@ export default async function LoginPage() {
               Esta demo valida credenciales en el servidor, firma el token, lo guarda en cookie segura y protege la entrada al panel privado.
             </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Card className="border-[var(--border)] bg-white">
-              <CardHeader>
-                <CardTitle>Usuario de prueba</CardTitle>
-                <CardDescription>Credenciales fijas para la correccion.</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm text-[var(--muted-foreground)]">
-                <p>
-                  <span className="font-medium text-[var(--foreground)]">Email:</span> admin@tomates.com
-                </p>
-                <p>
-                  <span className="font-medium text-[var(--foreground)]">Password:</span> 1234
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-[var(--border)] bg-[var(--card-strong)] text-white">
-              <CardHeader>
-                <CardTitle>Que cubre</CardTitle>
-                <CardDescription className="text-white/85">
-                  Login, JWT, dashboard privado y logout.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm text-white/90">
-                <p>Rutas `app/` de Next.js</p>
-                <p>Formulario en React con feedback</p>
-                <p>Proteccion con `proxy.ts`</p>
-              </CardContent>
-            </Card>
-          </div>
+          <Card className="max-w-sm border-[var(--foreground)] bg-white">
+            <CardHeader>
+              <CardTitle className="text-[var(--secondary)]">Usuario de prueba</CardTitle>
+              <CardDescription>Credenciales fijas para la correccion.</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-2 text-sm text-[var(--muted-foreground)]">
+              <p>
+                <span className="font-medium text-[var(--foreground)]">Email:</span> admin@tomates.com
+              </p>
+              <p>
+                <span className="font-medium text-[var(--foreground)]">Password:</span> 1234
+              </p>
+            </CardContent>
+          </Card>
         </section>
 
         <LoginForm />
